@@ -41,7 +41,7 @@ function User() {
           <Col md="4">
             <Card className="card-user">
               <div className="image">
-                <img alt="..." src={require("assets/img/damir-bosnjak.jpg")} />
+                <img alt="..." src={require("../assets/img/damir-bosnjak.jpg")} />
               </div>
               <CardBody>
                 <div className="author">
