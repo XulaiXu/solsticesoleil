@@ -49,7 +49,7 @@ function User() {
                     <img
                       alt="..."
                       className="avatar border-gray"
-                      src={require("assets/img/mike.jpg")}
+                      src={require("../assets/img/mike.jpg")}
                     />
                     <h5 className="title">Chet Faker</h5>
                   </a>
