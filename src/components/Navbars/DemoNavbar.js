@@ -38,7 +38,7 @@ import {
 
 import routes from "routes.js";
 
-function Header(props) {
+function DemoNavbar(props) {
   const [isOpen, setIsOpen] = React.useState(false);
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
   const [color, setColor] = React.useState("transparent");
@@ -176,4 +176,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default DemoNavbar;
