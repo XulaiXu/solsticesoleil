@@ -18,8 +18,9 @@
 */
 /*eslint-disable*/
 import React from "react";
-// react plugin for creating notifications over the dashboard
-import NotificationAlert from "react-notification-alert";
+// react plugin for creating notifications
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // reactstrap components
 import {
   UncontrolledAlert,
@@ -34,68 +35,40 @@ import {
 } from "reactstrap";
 
 function Notifications() {
-  const notificationAlert = React.useRef();
-  const notify = (place) => {
-    var color = Math.floor(Math.random() * 5 + 1);
-    var type;
-    switch (color) {
-      case 1:
-        type = "primary";
+  const notify = (type, message) => {
+    switch (type) {
+      case "info":
+        toast.info(message);
         break;
-      case 2:
-        type = "success";
+      case "success":
+        toast.success(message);
         break;
-      case 3:
-        type = "danger";
+      case "warning":
+        toast.warning(message);
         break;
-      case 4:
-        type = "warning";
-        break;
-      case 5:
-        type = "info";
+      case "danger":
+        toast.error(message);
         break;
       default:
-        break;
+        toast(message);
     }
-    var options = {};
-    options = {
-      place: place,
-      message: (
-        <div>
-          <div>
-            Welcome to <b>Paper Dashboard React</b> - a beautiful freebie for
-            every web developer.
-          </div>
-        </div>
-      ),
-      type: type,
-      icon: "nc-icon nc-bell-55",
-      autoDismiss: 7,
-    };
-    notificationAlert.current.notificationAlert(options);
   };
+
   return (
     <>
       <div className="content">
-        <NotificationAlert ref={notificationAlert} />
         <Row>
           <Col md="12">
             <Card>
               <CardHeader>
                 <CardTitle tag="h5">Notifications</CardTitle>
                 <p className="card-category">
-                  Handcrafted by our former colleague{" "}
-                  <a
-                    target="_blank"
-                    href="https://www.instagram.com/manu.nazare/"
-                  >
-                    Nazare Emanuel-Ioan (Manu)
+                  Handcrafted by our friend{" "}
+                  <a target="_blank" href="https://github.com/fkhadra">
+                    Fadi Khadra
                   </a>
                   . Please checkout the{" "}
-                  <a
-                    href="https://github.com/creativetimofficial/react-notification-alert"
-                    target="_blank"
-                  >
+                  <a href="https://github.com/fkhadra/react-toastify" target="_blank">
                     full documentation.
                   </a>
                 </p>
@@ -108,42 +81,34 @@ function Notifications() {
                         <CardTitle tag="h5">Notifications Style</CardTitle>
                       </CardHeader>
                       <CardBody>
-                        <Alert color="info">
-                          <span>This is a plain notification</span>
-                        </Alert>
-                        <UncontrolledAlert color="info" fade={false}>
-                          <span>This is a notification with close button.</span>
-                        </UncontrolledAlert>
-                        <UncontrolledAlert
-                          className="alert-with-icon"
+                        <Button
                           color="info"
-                          fade={false}
+                          block
+                          onClick={() => notify("info", "Welcome to Paper Dashboard React - a beautiful React Bootstrap admin panel")}
                         >
-                          <span
-                            data-notify="icon"
-                            className="nc-icon nc-bell-55"
-                          />
-                          <span data-notify="message">
-                            This is a notification with close button and icon.
-                          </span>
-                        </UncontrolledAlert>
-                        <UncontrolledAlert
-                          className="alert-with-icon"
-                          color="info"
-                          fade={false}
+                          Info
+                        </Button>
+                        <Button
+                          color="success"
+                          block
+                          onClick={() => notify("success", "Welcome to Paper Dashboard React - a beautiful React Bootstrap admin panel")}
                         >
-                          <span
-                            data-notify="icon"
-                            className="nc-icon nc-chart-pie-36"
-                          />
-                          <span data-notify="message">
-                            This is a notification with close button and icon
-                            and have many lines. You can see that the icon and
-                            the close button are always vertically aligned. This
-                            is a beautiful notification. So you don't have to
-                            worry about the style.
-                          </span>
-                        </UncontrolledAlert>
+                          Success
+                        </Button>
+                        <Button
+                          color="warning"
+                          block
+                          onClick={() => notify("warning", "Welcome to Paper Dashboard React - a beautiful React Bootstrap admin panel")}
+                        >
+                          Warning
+                        </Button>
+                        <Button
+                          color="danger"
+                          block
+                          onClick={() => notify("danger", "Welcome to Paper Dashboard React - a beautiful React Bootstrap admin panel")}
+                        >
+                          Danger
+                        </Button>
                       </CardBody>
                     </Card>
                   </Col>
@@ -214,7 +179,7 @@ function Notifications() {
                           <Button
                             block
                             color="primary"
-                            onClick={() => notify("tl")}
+                            onClick={() => notify("info", "Top Left")}
                           >
                             Top Left
                           </Button>
@@ -223,7 +188,7 @@ function Notifications() {
                           <Button
                             block
                             color="primary"
-                            onClick={() => notify("tc")}
+                            onClick={() => notify("info", "Top Center")}
                           >
                             Top Center
                           </Button>
@@ -232,7 +197,7 @@ function Notifications() {
                           <Button
                             block
                             color="primary"
-                            onClick={() => notify("tr")}
+                            onClick={() => notify("info", "Top Right")}
                           >
                             Top Right
                           </Button>
@@ -247,7 +212,7 @@ function Notifications() {
                           <Button
                             block
                             color="primary"
-                            onClick={() => notify("bl")}
+                            onClick={() => notify("info", "Bottom Left")}
                           >
                             Bottom Left
                           </Button>
@@ -256,7 +221,7 @@ function Notifications() {
                           <Button
                             block
                             color="primary"
-                            onClick={() => notify("bc")}
+                            onClick={() => notify("info", "Bottom Center")}
                           >
                             Bottom Center
                           </Button>
@@ -265,7 +230,7 @@ function Notifications() {
                           <Button
                             block
                             color="primary"
-                            onClick={() => notify("br")}
+                            onClick={() => notify("info", "Bottom Right")}
                           >
                             Bottom Right
                           </Button>
@@ -278,6 +243,7 @@ function Notifications() {
             </Card>
           </Col>
         </Row>
+        <ToastContainer />
       </div>
     </>
   );
