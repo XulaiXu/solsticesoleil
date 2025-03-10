@@ -66,6 +66,8 @@ const dashboard24HoursPerformanceChart = {
     };
   },
   options: {
+    responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: { display: false },
       tooltip: { enabled: false },
@@ -83,7 +85,6 @@ const dashboard24HoursPerformanceChart = {
         },
       },
       x: {
-        barPercentage: 1.6,
         grid: {
           drawBorder: false,
           display: false,
@@ -100,7 +101,7 @@ const dashboard24HoursPerformanceChart = {
 const dashboardEmailStatisticsChart = {
   data: (canvas) => {
     return {
-      labels: [1, 2, 3],
+      labels: ["Opened", "Read", "Deleted", "Unopened"],
       datasets: [
         {
           label: "Emails",
@@ -114,36 +115,11 @@ const dashboardEmailStatisticsChart = {
     };
   },
   options: {
+    responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: { display: false },
-      tooltip: { enabled: false },
-    },
-    maintainAspectRatio: false,
-    pieceLabel: {
-      render: "percentage",
-      fontColor: ["white"],
-      precision: 2,
-    },
-    scales: {
-      y: {
-        ticks: {
-          display: false,
-        },
-        grid: {
-          drawBorder: false,
-          display: false,
-        },
-      },
-      x: {
-        barPercentage: 1.6,
-        grid: {
-          drawBorder: false,
-          display: false,
-        },
-        ticks: {
-          display: false,
-        },
-      },
+      tooltip: { enabled: true },
     },
   },
 };
@@ -192,8 +168,34 @@ const dashboardNASDAQChart = {
     };
   },
   options: {
+    responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: { display: false },
+      tooltip: { enabled: true },
+    },
+    scales: {
+      y: {
+        ticks: {
+          color: "#9f9f9f",
+          beginAtZero: true,
+        },
+        grid: {
+          drawBorder: false,
+          display: true,
+          color: "#f2f2f2",
+        },
+      },
+      x: {
+        grid: {
+          drawBorder: false,
+          display: false,
+        },
+        ticks: {
+          padding: 10,
+          color: "#9f9f9f",
+        },
+      },
     },
   },
 };

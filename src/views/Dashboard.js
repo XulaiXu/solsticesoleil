@@ -19,6 +19,18 @@
 import React from "react";
 // react plugin used to create charts
 import { Line, Pie } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler,
+  ArcElement,
+} from 'chart.js';
 // reactstrap components
 import {
   Card,
@@ -35,6 +47,19 @@ import {
   dashboardEmailStatisticsChart,
   dashboardNASDAQChart,
 } from "../variables/charts.js";
+
+// Register ChartJS components
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler,
+  ArcElement
+);
 
 function Dashboard() {
   return (
@@ -153,12 +178,10 @@ function Dashboard() {
                 <CardTitle tag="h5">Users Behavior</CardTitle>
                 <p className="card-category">24 Hours performance</p>
               </CardHeader>
-              <CardBody>
+              <CardBody style={{ minHeight: "300px" }}>
                 <Line
-                  data={dashboard24HoursPerformanceChart.data}
+                  data={dashboard24HoursPerformanceChart.data(document.getElementById('canvas'))}
                   options={dashboard24HoursPerformanceChart.options}
-                  width={400}
-                  height={100}
                 />
               </CardBody>
               <CardFooter>
@@ -177,9 +200,9 @@ function Dashboard() {
                 <CardTitle tag="h5">Email Statistics</CardTitle>
                 <p className="card-category">Last Campaign Performance</p>
               </CardHeader>
-              <CardBody style={{ height: "266px" }}>
+              <CardBody style={{ minHeight: "300px" }}>
                 <Pie
-                  data={dashboardEmailStatisticsChart.data}
+                  data={dashboardEmailStatisticsChart.data(document.getElementById('canvas'))}
                   options={dashboardEmailStatisticsChart.options}
                 />
               </CardBody>
@@ -203,12 +226,10 @@ function Dashboard() {
                 <CardTitle tag="h5">NASDAQ: AAPL</CardTitle>
                 <p className="card-category">Line Chart with Points</p>
               </CardHeader>
-              <CardBody>
+              <CardBody style={{ minHeight: "300px" }}>
                 <Line
-                  data={dashboardNASDAQChart.data}
+                  data={dashboardNASDAQChart.data(document.getElementById('canvas'))}
                   options={dashboardNASDAQChart.options}
-                  width={400}
-                  height={100}
                 />
               </CardBody>
               <CardFooter>
