@@ -99,7 +99,7 @@ function User() {
                           <img
                             alt="..."
                             className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/ayo-ogunseinde-2.jpg")}
+                            src={require("../assets/img/faces/ayo-ogunseinde-2.jpg")}
                           />
                         </div>
                       </Col>
@@ -128,7 +128,7 @@ function User() {
                           <img
                             alt="..."
                             className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/joe-gardner-2.jpg")}
+                            src={require("../assets/img/faces/joe-gardner-2.jpg")}
                           />
                         </div>
                       </Col>
@@ -157,7 +157,7 @@ function User() {
                           <img
                             alt="..."
                             className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
+                            src={require("../assets/img/faces/clem-onojeghuo-2.jpg")}
                           />
                         </div>
                       </Col>
