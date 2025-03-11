@@ -1,6 +1,6 @@
 %card-stats{
   hr{
-    margin: 5px 15px;
+    display: none;
   }
 }
 
@@ -31,8 +31,7 @@
         }
 
         hr{
-          margin-top: 10px;
-          margin-bottom: 15px;
+          display: none;
         }
     }
     .icon-big {
