@@ -82,6 +82,7 @@ body {
 .main-panel > .content {
   padding: 0 30px;
   min-height: calc(100vh - 30px);
+  margin-top: 30px;
   border-top: none;
 }
 
