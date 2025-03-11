@@ -65,7 +65,7 @@ function Sidebar(props) {
           href="https://www.xulai.org"
           className="simple-text logo-normal"
         >
-          CertSherpa
+          NYA CA Log
         </a>
       </div>
       <div className="sidebar-wrapper" ref={sidebar}>
