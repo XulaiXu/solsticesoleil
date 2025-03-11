@@ -24,7 +24,7 @@ import TableList from "./views/Tables.js";
 import Maps from "./views/Map.js";
 import UserPage from "./views/User.js";
 import UpgradeToPro from "./views/Upgrade.js";
-import spreadsheetIcon from "./assets/img/spreadsheet-icon.svg";
+import spreadsheetMenuIcon from "./assets/img/spreadsheet-menu-icon.svg";
 
 var routes = [
   {
@@ -37,7 +37,7 @@ var routes = [
   {
     path: "/user-page",
     name: "Spreadsheet",
-    icon: spreadsheetIcon,
+    icon: spreadsheetMenuIcon,
     component: <UserPage />,
     layout: "/admin",
   },
