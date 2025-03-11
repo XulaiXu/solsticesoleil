@@ -35,17 +35,17 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/notifications",
-    name: "Notifications",
-    icon: "nc-icon nc-bell-55",
-    component: <Notifications />,
-    layout: "/admin",
-  },
-  {
     path: "/user-page",
     name: "CA Log",
     icon: caLogIcon,
     component: <UserPage />,
+    layout: "/admin",
+  },
+  {
+    path: "/notifications",
+    name: "Notifications",
+    icon: "nc-icon nc-bell-55",
+    component: <Notifications />,
     layout: "/admin",
   },
   {
