@@ -41,47 +41,12 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/icons",
-    name: "PE Breadth",
-    icon: "nc-icon nc-diamond",
-    component: <Icons />,
-    layout: "/admin",
-  },
-  {
-    path: "/maps",
-    name: "PE Depth",
-    icon: "nc-icon nc-pin-3",
-    component: <Maps />,
-    layout: "/admin",
-  },
-  {
-    path: "/notifications",
-    name: "SE Breadth",
-    icon: "nc-icon nc-bell-55",
-    component: <Notifications />,
-    layout: "/admin",
-  },
-  {
-    path: "/tables",
-    name: "SE Depth",
-    icon: "nc-icon nc-tile-56",
-    component: <TableList />,
-    layout: "/admin",
-  },
-  {
     path: "/typography",
     name: "Settings",
     icon: "nc-icon nc-settings-gear-65",
     component: <Typography />,
     layout: "/admin",
-  },
-  {
-    pro: true,
-    path: "/upgrade",
-    name: "Upgrade to PRO",
-    icon: "nc-icon nc-spaceship",
-    component: <UpgradeToPro />,
-    layout: "/admin",
-  },
+  }
 ];
+
 export default routes;
