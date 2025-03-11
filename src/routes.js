@@ -29,7 +29,7 @@ import spreadsheetIcon from "./assets/img/spreadsheet-icon.svg";
 var routes = [
   {
     path: "/dashboard",
-    name: "Dashboard",
+    name: "Summary",
     icon: "nc-icon nc-bank",
     component: <Dashboard />,
     layout: "/admin",
