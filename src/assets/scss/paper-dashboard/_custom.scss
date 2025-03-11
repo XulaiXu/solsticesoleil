@@ -6,8 +6,8 @@
     position: relative;
 
     .logo-img {
-      width: 43px;
-      height: 43px;
+      width: 47px;
+      height: 47px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -23,15 +23,15 @@
     }
 
     a.logo-mini {
-      width: 43px !important;
+      width: 47px !important;
       margin: 0 !important;
       display: flex;
       align-items: center;
     }
 
     a.logo-normal {
-      margin-left: -15px !important;
-      padding-left: 0 !important;
+      margin-left: 0px !important;
+      padding-left: 15px !important;
       display: flex;
       align-items: center;
       padding-top: 12px;
