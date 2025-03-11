@@ -54,7 +54,7 @@ function Sidebar(props) {
     >
       <div className="logo">
         <a
-          href="https://www.xulai.org"
+          href="https://www.solsticesoleil.com"
           className="simple-text logo-mini"
         >
           <div className="logo-img">
@@ -62,7 +62,7 @@ function Sidebar(props) {
           </div>
         </a>
         <a
-          href="https://www.xulai.org"
+          href="https://www.solsticesoleil.com"
           className="simple-text logo-normal"
         >
           NYA CA Log
