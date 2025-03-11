@@ -76,11 +76,13 @@ body {
   min-height: 100vh;
   background-color: var(--background-color);
   padding-top: 0;
+  border-top: none;
 }
 
 .main-panel > .content {
   padding: 0 30px;
   min-height: calc(100vh - 30px);
+  border-top: none;
 }
 
 /* Card styles */
@@ -111,6 +113,18 @@ body {
 
 .card .card-body {
   padding: 0 24px 24px 24px;
+}
+
+/* Stats cards row */
+.row.stats-cards {
+  margin-top: 0;
+  border-top: none;
+}
+
+.row.stats-cards .card {
+  margin-top: 0;
+  border-top: none;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 }
 
 /* Table styles */
