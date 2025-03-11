@@ -21,7 +21,6 @@ import React from "react";
 import PerfectScrollbar from "perfect-scrollbar";
 import { Route, Routes, useLocation } from "react-router-dom";
 
-import DemoNavbar from "../components/Navbars/DemoNavbar.js";
 import Footer from "../components/Footer/Footer.js";
 import Sidebar from "../components/Sidebar/Sidebar.js";
 
@@ -58,7 +57,6 @@ function Dashboard(props) {
         activeColor="info"
       />
       <div className="main-panel" ref={mainPanel}>
-        <DemoNavbar {...props} />
         <Routes>
           {routes.map((prop, key) => {
             return (
