@@ -24,6 +24,7 @@ import TableList from "./views/Tables.js";
 import Maps from "./views/Map.js";
 import UserPage from "./views/User.js";
 import UpgradeToPro from "./views/Upgrade.js";
+import caLogIcon from "./assets/img/ca-log-icon.svg";
 
 var routes = [
   {
@@ -43,7 +44,7 @@ var routes = [
   {
     path: "/user-page",
     name: "CA Log",
-    icon: "nc-icon nc-single-02",
+    icon: caLogIcon,
     component: <UserPage />,
     layout: "/admin",
   },

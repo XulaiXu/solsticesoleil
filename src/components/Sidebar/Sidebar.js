@@ -46,6 +46,14 @@ function Sidebar(props) {
       }
     };
   });
+
+  const renderIcon = (icon) => {
+    if (typeof icon === 'string') {
+      return <i className={icon} />;
+    }
+    return <img src={icon} alt="" style={{ width: '24px', height: '24px', marginRight: '12px' }} />;
+  };
+
   return (
     <div
       className="sidebar"
@@ -79,7 +87,7 @@ function Sidebar(props) {
                 key={key}
               >
                 <NavLink to={prop.layout + prop.path} className="nav-NavLink">
-                  <i className={prop.icon} />
+                  {renderIcon(prop.icon)}
                   <p>{prop.name}</p>
                 </NavLink>
               </li>
