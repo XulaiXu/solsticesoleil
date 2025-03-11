@@ -18,13 +18,13 @@
 */
 import Dashboard from "./views/Dashboard.js";
 import Notifications from "./views/Notifications.js";
+import Settings from "./views/Settings.js";
 import Icons from "./views/Icons.js";
-import Typography from "./views/Typography.js";
 import TableList from "./views/Tables.js";
 import Maps from "./views/Map.js";
 import UserPage from "./views/User.js";
 import UpgradeToPro from "./views/Upgrade.js";
-import spreadsheetMenuIcon from "./assets/img/spreadsheet-menu-icon.svg";
+import spreadsheetIcon from "./assets/img/spreadsheet-icon.svg";
 
 var routes = [
   {
@@ -37,7 +37,7 @@ var routes = [
   {
     path: "/user-page",
     name: "Spreadsheet",
-    icon: spreadsheetMenuIcon,
+    icon: spreadsheetIcon,
     component: <UserPage />,
     layout: "/admin",
   },
@@ -49,10 +49,10 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/typography",
+    path: "/settings",
     name: "Settings",
     icon: "nc-icon nc-settings-gear-65",
-    component: <Typography />,
+    component: <Settings />,
     layout: "/admin",
   }
 ];
