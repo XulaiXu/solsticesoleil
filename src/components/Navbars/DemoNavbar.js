@@ -133,13 +133,12 @@ function DemoNavbar(props) {
               <DropdownToggle caret nav>
                 <i className="nc-icon nc-bell-55" />
                 <p>
-                  <span className="d-lg-none d-md-block">Some Actions</span>
+                  <span className="d-lg-none d-md-block">Notifications</span>
                 </p>
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem tag="a">Action</DropdownItem>
-                <DropdownItem tag="a">Another Action</DropdownItem>
-                <DropdownItem tag="a">Something else here</DropdownItem>
+                <DropdownItem tag="a">New Notification</DropdownItem>
+                <DropdownItem tag="a">View All</DropdownItem>
               </DropdownMenu>
             </Dropdown>
             <NavItem>
