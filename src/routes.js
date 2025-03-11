@@ -24,7 +24,7 @@ import TableList from "./views/Tables.js";
 import Maps from "./views/Map.js";
 import UserPage from "./views/User.js";
 import UpgradeToPro from "./views/Upgrade.js";
-import caLogIcon from "./assets/img/ca-log-icon.svg";
+import spreadsheetIcon from "./assets/img/spreadsheet-icon.svg";
 
 var routes = [
   {
@@ -36,8 +36,8 @@ var routes = [
   },
   {
     path: "/user-page",
-    name: "CA Log",
-    icon: caLogIcon,
+    name: "Spreadsheet",
+    icon: spreadsheetIcon,
     component: <UserPage />,
     layout: "/admin",
   },
